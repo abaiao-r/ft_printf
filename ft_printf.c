@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:10:22 by andrefranci       #+#    #+#             */
-/*   Updated: 2022/11/22 14:59:40 by andrefranci      ###   ########.fr       */
+/*   Updated: 2022/11/22 15:10:47 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static int	format(char *s, va_list args)
 	else if (s[i] == 'X')
 		return (ft_putnbr_base(args, unsigned int), "0123456789ABCDEF", 16);
 	else if (s[i] == '%')
-		write(1, "%%", 1);
+		return (write(1, "%%", 1));
 }
 
 int	ft_printf(const char *s, ...)
